@@ -1,3 +1,6 @@
 auto-save-list
 *~
 .DS_Store
+elpa
+recentf
+ac-comphist.dat
