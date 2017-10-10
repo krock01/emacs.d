@@ -3,7 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (try counsel ace-window which-key use-package))))
+ '(package-selected-packages
+   (quote
+    (auto-complete try counsel ace-window which-key use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,7 +79,7 @@
   (setq ivy-display-style 'fancy))
 
 (use-package swiper
-  :ensure try
+  :ensure t
   :bind (("C-s" . swiper)
 	 ("C-r" . swiper)
 	 ("C-c C-r" . ivy-resume)
@@ -92,3 +94,12 @@
 (use-package avy
   :ensure t
   :bind ("M-s" . avy-goto-char))
+
+;; auto complete
+(use-package auto-complete
+  :ensure t
+  :init
+  (progn
+    (ac-config-default)
+    (global-auto-complete-mode t)
+    ))
