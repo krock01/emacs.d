@@ -1,16 +1,15 @@
-
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
 (use-package try
-        :ensure t)
+	:ensure t)
 
 (use-package which-key
-        :ensure t 
-        :config
-        (which-key-mode))
+	:ensure t 
+	:config
+	(which-key-mode))
 
 (use-package ace-window
 :ensure t
@@ -47,10 +46,10 @@
   (use-package swiper
   :ensure t
   :bind (("C-s" . swiper)
-         ("C-r" . swiper)
-         ("C-c C-r" . ivy-resume)
-         ("M-x" . counsel-M-x)
-         ("C-x C-f" . counsel-find-file))
+	 ("C-r" . swiper)
+	 ("C-c C-r" . ivy-resume)
+	 ("M-x" . counsel-M-x)
+	 ("C-x C-f" . counsel-find-file))
   :config
   (progn
     (ivy-mode 1)
@@ -76,3 +75,12 @@
       :init
       (load-theme 'spacemacs-dark t)
      )
+
+(use-package ox-reveal
+:ensure ox-reveal)
+
+(setq org-reveal-root " http://cdn.jsdelivr.net/reveal.js/3.0.0/")
+(setq org-reveal-mathjax t)
+
+(use-package htmlize
+:ensure t)

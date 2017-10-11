@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(mac)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href=" http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href=" http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = ' http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2 class="author">mac</h2><p class="date">Created: 2017-10-11 Wed 12:38</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgd4917c4">1. 第一章</a></li>
+<li><a href="#/slide-org96158d9">2. 第二章</a>
+<ul>
+<li><a href="#/slide-org0ba6058">2.1. 你好我的哥</a></li>
+<li><a href="#/slide-orgfb213b4">2.2. 你好我的神经</a></li>
+</ul>
+</li>
+<li><a href="#/slide-org3deb300">3. 第三章</a>
+<ul>
+<li><a href="#/slide-orgc911cf4">3.1. 学习帽子</a></li>
+<li><a href="#/slide-org4370d71">3.2. 学习拼音</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgc16bcb0">4. 第四章</a>
+<ul>
+<li><a href="#/slide-orga7f0d5a">4.1. 学习英语</a></li>
+<li><a href="#/slide-org65c3274">4.2. 学习礼仪</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgd4917c4">
+<h2 id="orgd4917c4"><span class="section-number-2">1</span> 第一章</h2>
+<p>
+hello world
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python">var <span style="color: #7590db;">something</span> = <span style="color: #2d9574;">"hello"</span>;
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org96158d9">
+<h2 id="org96158d9"><span class="section-number-2">2</span> 第二章</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+</section>
+<section id="slide-org0ba6058">
+<h3 id="org0ba6058"><span class="section-number-3">2.1</span> 你好我的哥</h3>
+</section>
+<section id="slide-orgfb213b4">
+<h3 id="orgfb213b4"><span class="section-number-3">2.2</span> 你好我的神经</h3>
+</section>
+</section>
+<section>
+<section id="slide-org3deb300">
+<h2 id="org3deb300"><span class="section-number-2">3</span> 第三章</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+</section>
+<section id="slide-orgc911cf4">
+<h3 id="orgc911cf4"><span class="section-number-3">3.1</span> 学习帽子</h3>
+</section>
+<section id="slide-org4370d71">
+<h3 id="org4370d71"><span class="section-number-3">3.2</span> 学习拼音</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgc16bcb0">
+<h2 id="orgc16bcb0"><span class="section-number-2">4</span> 第四章</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</section>
+<section id="slide-orga7f0d5a">
+<h3 id="orga7f0d5a"><span class="section-number-3">4.1</span> 学习英语</h3>
+</section>
+<section id="slide-org65c3274">
+<h3 id="org65c3274"><span class="section-number-3">4.2</span> 学习礼仪</h3>
+</section>
+</section>
+</div>
+</div>
+<script src=" http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src=" http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: ' http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: ' http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: ' http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: ' http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: ' http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
