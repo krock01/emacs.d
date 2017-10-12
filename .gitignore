@@ -4,4 +4,8 @@ auto-save-list
 elpa
 recentf
 ac-comphist.dat
+<<<<<<< HEAD
 ENV
+=======
+.python-environments/
+>>>>>>> 5543fa80d996ac8e5ba3764a88f73a8df0898e38
