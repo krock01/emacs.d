@@ -84,3 +84,21 @@
 
 (use-package htmlize
 :ensure t)
+
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+
+(setq python-shell-completion-native-enable nil)
+
+(use-package exec-path-from-shell
+ :ensure t)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+(use-package jedi
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-hook 'python-mode-hook 'jedi:ac-setup))

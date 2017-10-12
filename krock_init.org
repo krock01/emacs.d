@@ -104,3 +104,40 @@
 (use-package htmlize
 :ensure t)
 #+END_SRC
+* flycheck
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+#+END_SRC
+* solve python shell warning
+#+BEGIN_SRC emacs-lisp
+(setq python-shell-completion-native-enable nil)
+
+#+END_SRC
+* solve mac shell path
+#+BEGIN_SRC emacs-lisp
+(use-package exec-path-from-shell
+ :ensure t)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+#+END_SRC
+* install python environment
+** python check
+ sudo -H pip install pylint
+** python complete
+ sudo -H pip install jedi
+ sudo -H pip install epc
+** use jedi must install virtualenv
+ sudo -H pip install virtualenv
+ cd project folder 
+ virtualenv ENV
+* jedi
+#+BEGIN_SRC emacs-lisp
+(use-package jedi
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-hook 'python-mode-hook 'jedi:ac-setup))
+#+END_SRC
