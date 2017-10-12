@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (undo-tree elpy jedi flycheck htmlize monokai-theme auto-complete try counsel ace-window which-key use-package))))
+    (iedit expand-region hungry-delete beacon undo-tree elpy jedi flycheck htmlize monokai-theme auto-complete try counsel ace-window which-key use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
