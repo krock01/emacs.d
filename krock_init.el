@@ -102,3 +102,18 @@
   :init
   (add-hook 'python-mode-hook 'jedi:setup)
   (add-hook 'python-mode-hook 'jedi:ac-setup))
+
+(use-package elpy
+:ensure t
+:config 
+(elpy-enable))
+
+(use-package yasnippet
+  :ensure t
+  :init
+    (yas-global-mode 1))
+
+(use-package undo-tree
+:ensure t
+  :init
+    (global-undo-tree-mode))

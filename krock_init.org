@@ -153,3 +153,10 @@
   :init
     (yas-global-mode 1))
 #+END_SRC
+* undo tree
+#+BEGIN_SRC emacs-lisp
+(use-package undo-tree
+:ensure t
+  :init
+    (global-undo-tree-mode))
+#+END_SRC
