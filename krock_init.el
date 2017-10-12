@@ -131,6 +131,12 @@
 :ensure t
 :config
 (global-set-key (kbd "C-=") 'er/expand-region))
+(setq save-interprogram-paste-before-kill t)
+
+
+(global-auto-revert-mode 1) ;; you might not want this
+(setq auto-revert-verbose nil) ;; or this
+(global-set-key (kbd "<f5>") 'revert-buffer)
 
 ; mark and edit all copies of the marked region simultaniously. kbd C-;
 (use-package iedit
@@ -173,3 +179,59 @@ narrowed."
 
 ;(load-if-exists "~/Dropbox/shared/mu4econfig.el")
 ;(load-if-exists "~/Dropbox/shared/not-for-github.el")
+
+(use-package web-mode
+    :ensure t
+    :config
+	   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+	   (add-to-list 'auto-mode-alist '("\\.vue?\\'" . web-mode))
+	   (setq web-mode-engines-alist
+		 '(("django"    . "\\.html\\'")))
+	   (setq web-mode-ac-sources-alist
+	   '(("css" . (ac-source-css-property))
+	   ("vue" . (ac-source-words-in-buffer ac-source-abbrev))
+         ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+(setq web-mode-enable-auto-closing t))
+(setq web-mode-enable-auto-quoting t) ; this fixes the quote problem I mentioned
+
+(use-package js2-mode
+:ensure t
+:ensure ac-js2
+:init
+(progn
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+))
+
+(use-package js2-refactor
+:ensure t
+:config 
+(progn
+(js2r-add-keybindings-with-prefix "C-c C-m")
+;; eg. extract function with `C-c C-m ef`.
+(add-hook 'js2-mode-hook #'js2-refactor-mode)))
+(use-package tern
+:ensure tern
+:ensure tern-auto-complete
+:config
+(progn
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(tern-ac-setup)
+))
+
+;;(use-package jade
+;;:ensure t
+;;)
+
+(use-package nodejs-repl
+:ensure t
+)
+
+(add-hook 'js-mode-hook
+          (lambda ()
+            (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)
+            (define-key js-mode-map (kbd "C-c C-r") 'nodejs-repl-send-region)
+            (define-key js-mode-map (kbd "C-c C-l") 'nodejs-repl-load-file)
+            (define-key js-mode-map (kbd "C-c C-z") 'nodejs-repl-switch-to-repl)))
