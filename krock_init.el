@@ -232,6 +232,108 @@ narrowed."
 (add-hook 'js-mode-hook
           (lambda ()
             (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)
-            (define-key js-mode-map (kbd "C-c C-r") 'nodejs-repl-send-region)
+           ; (define-key js-mode-map (kbd "C-c C-r") 'nodejs-repl-send-region);tern-rename 冲突
             (define-key js-mode-map (kbd "C-c C-l") 'nodejs-repl-load-file)
             (define-key js-mode-map (kbd "C-c C-z") 'nodejs-repl-switch-to-repl)))
+
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode)
+  (setq projectile-enable-caching t)
+  (setq projectile-completion-system 'ivy)
+)
+
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-on))
+
+(use-package dumb-jump
+  :bind (("M-g o" . dumb-jump-go-other-window)
+         ("M-g j" . dumb-jump-go)
+         ("M-g i" . dumb-jump-go-prompt)
+         ("M-g x" . dumb-jump-go-prefer-external)
+         ("M-g z" . dumb-jump-go-prefer-external-other-window))
+  :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
+  :ensure)
+
+(use-package dired+
+  :ensure t
+  :config (require 'dired+)
+  )
+
+
+(use-package dired-quick-sort
+  :ensure t
+  :config
+  (dired-quick-sort-setup))
+
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+ (setq ibuffer-saved-filter-groups
+	(quote (("default"
+		 ("dired" (mode . dired-mode))
+		 ("org" (name . "^.*org$"))
+	       
+		 ("web" (or (mode . web-mode) (mode . js2-mode)))
+		 ("shell" (or (mode . eshell-mode) (mode . shell-mode)))
+		 ("mu4e" (or
+
+                (mode . mu4e-compose-mode)
+                (name . "\*mu4e\*")
+                ))
+		 ("programming" (or
+				 (mode . python-mode)
+				 (mode . c++-mode)))
+		 ("emacs" (or
+			   (name . "^\\*scratch\\*$")
+			   (name . "^\\*Messages\\*$")))
+		 ))))
+ (add-hook 'ibuffer-mode-hook
+	    (lambda ()
+	      (ibuffer-auto-mode 1)
+	      (ibuffer-switch-to-saved-filter-groups "default")))
+ ;; don't show these
+					  ;(add-to-list 'ibuffer-never-show-predicates "zowie")
+ ;; Don't show filter groups if there are no buffers in that group
+ (setq ibuffer-show-empty-filter-groups nil)
+
+ ;; Don't ask for confirmation to delete marked buffers
+ (setq ibuffer-expert t)
+
+(use-package ggtags
+:ensure t
+:config 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+)
+
+(use-package magit
+:ensure t
+:init
+(progn
+(bind-key "C-x g" 'magit-status)
+))
+
+(use-package git-gutter
+:ensure t
+:init
+(global-git-gutter-mode +1))
+
+(use-package git-timemachine
+:ensure t
+)
+
+;; babel stuff
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   (emacs-lisp . t)
+   (C . t)
+   (js . t)
+   (dot . t)
+   (org . t)
+   ))
