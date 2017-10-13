@@ -407,3 +407,8 @@ narrowed."
     :config
     (setq treemacs-header-function #'treemacs-projectile-create-header)
 )
+
+(use-package better-shell
+    :ensure t
+    :bind (("<f10>" . better-shell-shell)
+	   ("<f11>" . better-shell-remote-open)))

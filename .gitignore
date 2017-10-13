@@ -8,3 +8,4 @@ ENV
 .python-environments/
 *.cache
 *.eld
+tramp

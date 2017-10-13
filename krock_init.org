@@ -476,3 +476,10 @@ narrowed."
     (setq treemacs-header-function #'treemacs-projectile-create-header)
 )
 #+END_SRC
+* better shell
+#+BEGIN_SRC emacs-lisp
+(use-package better-shell
+    :ensure t
+    :bind (("<f10>" . better-shell-shell)
+	   ("<f11>" . better-shell-remote-open)))
+#+END_SRC
