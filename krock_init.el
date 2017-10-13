@@ -338,14 +338,6 @@ narrowed."
    (org . t)
    ))
 
-(use-package neotree
-:ensure t
-:config
-(global-set-key [f8] 'neotree-toggle)
-(setq neo-smart-open t)
-(setq projectile-switch-project-action 'neotree-projectile-action)
-)
-
 (use-package treemacs
     :ensure t
     :defer t
