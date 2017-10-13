@@ -6,3 +6,5 @@ recentf
 ac-comphist.dat
 ENV
 .python-environments/
+*.cache
+*.eld
