@@ -107,7 +107,7 @@
 :ensure t
 :config
 (setq powerline-arrow-shape 'arrow)
-(powerline-moe-theme )
+(powerline-default-theme )
 )
 
 (use-package ox-reveal
