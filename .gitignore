@@ -8,4 +8,5 @@ ENV
 .python-environments/
 *.cache
 *.eld
+*.tern-port
 tramp
