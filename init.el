@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (emmet-mode better-shell powerline dumb-jump counsel-projectile projectile treemacs-projectile treemacs neotree git-timemachine git-gutter magit ggtags dired-quick-sort dired+ nodejs-repl tern-auto-complete tern js2-refactor ac-js2 js2-mode web-mode iedit expand-region hungry-delete beacon undo-tree elpy jedi flycheck htmlize monokai-theme auto-complete try counsel ace-window which-key use-package))))
+    (tide typescript-mode emmet-mode better-shell powerline dumb-jump counsel-projectile projectile treemacs-projectile treemacs neotree git-timemachine git-gutter magit ggtags dired-quick-sort dired+ nodejs-repl tern-auto-complete tern js2-refactor ac-js2 js2-mode web-mode iedit expand-region hungry-delete beacon undo-tree elpy jedi flycheck htmlize monokai-theme auto-complete try counsel ace-window which-key use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
