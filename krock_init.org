@@ -168,3 +168,7 @@
 #+BEGIN_SRC emacs-lisp
 (require 'init-typescript)
 #+END_SRC
+* js-doc
+#+BEGIN_SRC emacs-lisp
+(require 'init-js-doc)
+#+END_SRC

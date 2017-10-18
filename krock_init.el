@@ -93,3 +93,5 @@
 (require 'init-shell)
 
 (require 'init-typescript)
+
+(require 'init-js-doc)
