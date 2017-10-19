@@ -11,8 +11,14 @@
           ;;ac-comphist-file (concat spacemacs-cache-directory "ac-comphist.dat")
           ;; use 'complete when auto-complete is disabled
           tab-always-indent 'complete
-          ac-dwim t)  ;; 提示的menu增加延迟展示
-  (global-auto-complete-mode t)
+          ac-dwim t
+	  ;ac-ignore-case t
+	  )
+        (setq ac-use-menu-map t)
+	;; Default settings
+	(define-key ac-menu-map "\C-n" 'ac-next)
+	(define-key ac-menu-map "\C-p" 'ac-previous)
+	(global-auto-complete-mode t)
 ;;  (setq ac-auto-start nil)              ;auto complete using clang is CPU sensitive
  ; (ac-set-trigger-key "<C-return>")
 ; (global-set-key "\M-/" 'auto-complete)

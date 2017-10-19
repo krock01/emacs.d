@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: face
+# key: face
+# --
+interface $1{
+
+}
