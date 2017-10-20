@@ -1,5 +1,6 @@
 (setq inhibit-startup-message t)
 (set-scroll-bar-mode nil)
+(set-default-font "Menlo-14") 
 (tool-bar-mode -1)
 (setq make-backup-files nil)
 (use-package maxframe

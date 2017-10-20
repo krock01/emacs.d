@@ -24,8 +24,6 @@
 
 (require 'init-reveal)
 
-(require 'init-check)
-
 ;(setq python-shell-completion-native-enable nil)
 
 (require 'init-path-shell)
@@ -95,3 +93,5 @@
 (require 'init-typescript)
 
 (require 'init-js-doc)
+
+(require 'init-check)

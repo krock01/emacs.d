@@ -45,10 +45,6 @@
 #+BEGIN_SRC emacs-lisp
 (require 'init-reveal)
 #+END_SRC
-* flycheck
-#+BEGIN_SRC emacs-lisp
-(require 'init-check)
-#+END_SRC
 * solve python shell warning
 #+BEGIN_SRC emacs-lisp
 ;(setq python-shell-completion-native-enable nil)
@@ -171,4 +167,8 @@
 * js-doc
 #+BEGIN_SRC emacs-lisp
 (require 'init-js-doc)
+#+END_SRC
+* flycheck
+#+BEGIN_SRC emacs-lisp
+(require 'init-check)
 #+END_SRC
