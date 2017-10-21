@@ -1,9 +1,9 @@
 * load file
 #+BEGIN_SRC emacs-lisp
-(defun load-if-exists (f)
-  "load the elisp file only if it exists and is readable"
-  (if (file-readable-p f)
-      (load-file f)))
+;(defun load-if-exists (f)
+;  "load the elisp file only if it exists and is readable"
+;  (if (file-readable-p f)
+;      (load-file f)))
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;(load-if-exists "~/Dropbox/shared/mu4econfig.el")
 ;(load-if-exists "~/Dropbox/shared/not-for-github.el")
@@ -35,7 +35,8 @@
 #+END_SRC
 * auto-complete
 #+BEGIN_SRC emacs-lisp
-(require 'init-ac)
+;(require 'init-ac)
+(require 'init-cp)
 #+END_SRC
 * themes
 #+BEGIN_SRC emacs-lisp
