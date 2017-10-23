@@ -24,7 +24,8 @@
 	 ("C-r" . swiper)
 	 ("C-c C-r" . ivy-resume)
 	 ("M-x" . counsel-M-x)
-	 ("C-x C-f" . counsel-find-file))
+	 ("C-x C-f" . counsel-find-file)
+	 ("C-c k" . counsel-ag))
   :config
   (progn
     (ivy-mode 1)
