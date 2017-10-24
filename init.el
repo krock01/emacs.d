@@ -33,6 +33,8 @@
 
 (require 'init-tweaks)
 
+(require 'init-jump)
+
 (require 'init-try)
 
 (require 'init-which-key)
@@ -81,8 +83,6 @@
 (require 'init-emmet)
 
 (require 'init-projectile)
-
-(require 'init-jump)
 
 ;(use-package dired+
 ;  :ensure t

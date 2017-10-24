@@ -18,4 +18,5 @@
 )    
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region)
+(global-set-key (kbd "M-SPC") 'set-mark-command) 
 (provide 'init-tweaks)
