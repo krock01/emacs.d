@@ -2,6 +2,6 @@
 # name: face
 # key: face
 # --
-interface $1{
+interface ${class}{
 
 }
