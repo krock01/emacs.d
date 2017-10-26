@@ -6,7 +6,7 @@
  '(custom-enabled-themes (quote (moe-dark)))
  '(package-selected-packages
    (quote
-    (sass-mode ox-reveal xref-js2 js-doc yasnippet exec-path-from-shell tide typescript-mode emmet-mode better-shell powerline dumb-jump counsel-projectile projectile treemacs-projectile treemacs neotree git-timemachine git-gutter magit ggtags dired-quick-sort dired+ nodejs-repl tern-auto-complete tern js2-refactor ac-js2 js2-mode web-mode iedit expand-region hungry-delete beacon undo-tree elpy jedi htmlize monokai-theme auto-complete try counsel ace-window which-key use-package)))
+    (less-css-mode scss-mode sass-mode ox-reveal xref-js2 js-doc yasnippet exec-path-from-shell tide typescript-mode emmet-mode better-shell powerline dumb-jump counsel-projectile projectile treemacs-projectile treemacs neotree git-timemachine git-gutter magit ggtags dired-quick-sort dired+ nodejs-repl tern-auto-complete tern js2-refactor ac-js2 js2-mode web-mode iedit expand-region hungry-delete beacon undo-tree elpy jedi htmlize monokai-theme auto-complete try counsel ace-window which-key use-package)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
