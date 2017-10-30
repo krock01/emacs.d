@@ -1,8 +1,8 @@
 (use-package color-theme
 :ensure t)
-;(use-package zenburn-theme
-;  :ensure t
-;  :config (load-theme 'zenburn t))
+(use-package zenburn-theme
+  :ensure t
+  :config (load-theme 'zenburn t))
 ;(use-package spacemacs-theme
 ;  :ensure t
 ;  ;:init
@@ -13,8 +13,8 @@
 ;:ensure t
 ;)
 
-(use-package moe-theme
-:ensure t)
+;(use-package moe-theme
+;:ensure t)
 
 ;(use-package eziam-theme
 ;:ensure t)
@@ -24,7 +24,7 @@
 
  
 ; (load-theme 'base16-flat t)
-(moe-dark)
+;(moe-dark)
 (use-package powerline
 :ensure t
 :config
