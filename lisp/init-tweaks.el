@@ -18,5 +18,6 @@
 )    
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region)
-(global-set-key (kbd "M-SPC") 'set-mark-command) 
+(global-set-key (kbd "M-SPC") 'set-mark-command)
+(add-to-list 'exec-path "/usr/local/bin")
 (provide 'init-tweaks)
