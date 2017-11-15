@@ -1,8 +1,9 @@
 (setq inhibit-startup-message t)
 (set-scroll-bar-mode nil)
-(set-default-font "Menlo-14") 
+(set-frame-font "Menlo-14")
 (tool-bar-mode -1)
 (setq make-backup-files nil)
+(setq tab-width 2)
 (use-package maxframe
 :ensure t
 :config
