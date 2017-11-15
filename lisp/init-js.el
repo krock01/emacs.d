@@ -16,13 +16,11 @@
 (add-hook 'js2-mode-hook #'js2-refactor-mode)))
 (use-package tern
   :ensure t
-  :ensure company-tern
-:config
-(progn
-   (add-to-list 'company-backends 'company-tern)
-(add-hook 'js-mode-hook (lambda () (tern-mode t)))
-(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  :config
+  (progn
+    (add-hook 'js-mode-hook (lambda () (tern-mode t)))
+    (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ))
 
 ;;(use-package jade
