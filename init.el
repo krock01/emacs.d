@@ -45,7 +45,7 @@
 
 (require 'init-avy)
 
-(require 'init-ac)
+;;(require 'init-ac)
 (require 'init-cp)
 
 (require 'init-theme)

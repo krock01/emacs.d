@@ -1,10 +1,10 @@
 (use-package js2-mode
 :ensure t
-:ensure ac-js2
+;;:ensure ac-js2
 :init
 (progn
 (add-hook 'js-mode-hook 'js2-minor-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+;;(add-hook 'js2-mode-hook 'ac-js2-mode)
 ))
 
 (use-package js2-refactor
@@ -15,14 +15,14 @@
 ;; eg. extract function with `C-c C-m ef`.
 (add-hook 'js2-mode-hook #'js2-refactor-mode)))
 (use-package tern
-:ensure tern
-:ensure tern-auto-complete
+  :ensure t
+  :ensure company-tern
 :config
 (progn
+   (add-to-list 'company-backends 'company-tern)
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(tern-ac-setup)
 ))
 
 ;;(use-package jade
